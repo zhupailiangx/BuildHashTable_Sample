@@ -14,8 +14,9 @@ sycl::queue q_和q_ = dpct::get_default_queue()
 
 
 ### 在Linux系统上
-* 安装oneapi(2023.0.0)
-* 打开BuildHashTable_Sample,找到BuildHashTable_Sample.cpp所在的文件夹
+* Install oneapi(2023.0.0)
+* git clone https://github.com/zhupailiangx/BuildHashTable_Sample.git
+* cd BuildHashTable_Sample/BuildHashTable_Sample
 * source /opt/intel/oneapi/setvars.sh
 * dpcpp BuildHashTable_Sample.cpp -o BuildHashTable_Sample
 * ./BuildHashTable_Sample
