@@ -5,20 +5,20 @@
 
 
 ### 在Linux系统上
-* 安装oneapi(2023.0.0)\
+* 安装oneapi(2023.0.0)
 * 打开BuildHashTable_Sample,找到BuildHashTable_Sample.cpp所在的文件夹
 * source /opt/intel/oneapi/setvars.sh
 * dpcpp BuildHashTable_Sample.cpp -o BuildHashTable_Sample
 * ./BuildHashTable_Sample
 
 ### On a Windows System
-     * 安装oneapi(2023.0.0)
+* 安装oneapi(2023.0.0)
 
 #### Visual Studio IDE
-     * 打开 Visual Studio
-     * 选择菜单 "File > Open > Project/Solution",找到"BuildHashTable_Sample"文件夹和选择"BuildHashTable_Sample.sln"
-     * 检查包含目录是否包含dpct文件路径
-     * 选择菜单 "Project > Build" ，然后执行代码
+* 打开 Visual Studio
+* 选择菜单 "File > Open > Project/Solution",找到"BuildHashTable_Sample"文件夹和选择"BuildHashTable_Sample.sln"
+* 检查包含目录是否包含dpct文件路径
+* 选择菜单 "Project > Build" ，然后执行代码
      
 
 
