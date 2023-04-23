@@ -3,7 +3,9 @@
 ## 引言
 在实验Normals_Estimation算法过程中，fixed_radius_index.h文件99行给出q_的初始化方式为
 ```bash
-sycl::queue q_ ```
+sycl::queue q_ 
+```
+
 测试发现，这样的初始化方式在Linux和Windows上代码性能有很大差异。所以，写下本示例，对比
 ```bash
 sycl::queue q_和q_ = dpct::get_default_queue()
