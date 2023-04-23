@@ -13,7 +13,8 @@ in building hash tables on Linux and Windows, hoping to help the next work.
 
 ### On Linux
 * Install oneapi(2023.0.0)
-* Open BuildHashTable_Sample and find BuildHashTable_Sample.cpp
+* git clone https://github.com/zhupailiangx/BuildHashTable_Sample.git
+* cd BuildHashTable_Sample/BuildHashTable_Sample
 * source /opt/intel/oneapi/setvars.sh
 * dpcpp BuildHashTable_Sample.cpp -o BuildHashTable_Sample
 * ./BuildHashTable_Sample
