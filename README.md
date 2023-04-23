@@ -11,7 +11,7 @@
 * dpcpp BuildHashTable_Sample.cpp -o BuildHashTable_Sample
 * ./BuildHashTable_Sample
 
-### On a Windows System
+### 在 Windows 系统上
 * 安装oneapi(2023.0.0)
 
 #### Visual Studio IDE
