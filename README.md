@@ -5,7 +5,7 @@
 
 
 ### 在Linux系统上
-* 安装oneapi(2023.0.0)
+* 安装oneapi(2023.0.0)\
 *打开BuildHashTable_Sample,找到BuildHashTable_Sample.cpp所在的文件夹
         * source /opt/intel/oneapi/setvars.sh
     * dpcpp BuildHashTable_Sample.cpp -o BuildHashTable_Sample
