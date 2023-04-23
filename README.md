@@ -1,7 +1,14 @@
 # queue在linux 和Windows上的不同
 
 ## 引言
-在实验Normals_Estimation算法过程中，发现Linux和Windows上queue不同初始化方式，对代码性能有很大影响。所以，写下本示例，对比q_选择默认队列和q_ = dpct::get_default_queue()的性能差异，希望对接下来的工作有所帮助。
+在实验Normals_Estimation算法过程中，fixed_radius_index.h文件99行给出q_的初始化方式为
+```bash
+sycl::queue q_ ```
+测试发现，这样的初始化方式在Linux和Windows上代码性能有很大差异。所以，写下本示例，对比
+```bash
+sycl::queue q_和q_ = dpct::get_default_queue()
+```
+的性能差异，希望对接下来的工作有所帮助。
 
 
 ### 在Linux系统上
@@ -85,7 +92,8 @@ Loop = 5
  build hash table time=1ms
 
 ```
-
+## 总结
+本示例对比了sycl::queue q_和q_ = dpct::get_default_queue()对建立哈希表的性能影响，结果表明，我们需要把fixed_radius_index.h文件99行给出q_的初始化方式修改成sycl::queue q_ = dpct::get_default_queue(),这样Windows 和Linux上Normals_Estimation就有了差不多的性能。
 
 
 
