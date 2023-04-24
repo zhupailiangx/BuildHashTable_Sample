@@ -1,7 +1,7 @@
 # queue在linux 和Windows上的不同
 
 ## 引言
-在实验Normals_Estimation算法过程中，fixed_radius_index.h文件99行给出q_的初始化方式为
+在实验Normals_Estimation算法过程中，**fixed_radius_index.h**文件99行给出q_的初始化方式为
 ```bash
 sycl::queue q_ 
 ```
@@ -96,5 +96,5 @@ Loop = 5
 
 ```
 ## 总结
-本示例对比了sycl::queue q_和q_ = dpct::get_default_queue()对建立哈希表的性能影响，结果表明，我们需要把fixed_radius_index.h文件99行给出q_的初始化方式修改成sycl::queue q_ = dpct::get_default_queue(),这样Windows 和Linux上Normals_Estimation就有了差不多的性能。
+本示例对比了sycl::queue q_和q_ = dpct::get_default_queue()对建立哈希表的性能影响，结果表明，我们需要把fixed_radius_index.h文件99行给出q_的初始化方式修改成**sycl::queue q_ = dpct::get_default_queue()**,这样Windows 和Linux上Normals_Estimation就有了差不多的性能。
 
