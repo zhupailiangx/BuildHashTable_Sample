@@ -26,68 +26,75 @@ in building hash tables on Linux and Windows, hoping to help the next work.
 * Select menu "File > Open > Project/Solution",find "BuildHashTable_Sample" folder and select "BuildHashTable_Sample.sln"
 * Check if include directory contains dpct file path
 * Select menu "Project > Build", then view the execution results
-### Test results on Linux
-```bash
-  Test with default q_:
 
-Loop = 1
- build hash table time=64ms
-Loop = 2
- build hash table time=8ms
-Loop = 3
- build hash table time=7ms
-Loop = 4
- build hash table time=7ms
-Loop = 5
- build hash table time=6ms
+### Test results
+<table border=0 cellpadding=0 cellspacing=0 width=902 style='border-collapse:
+ collapse;table-layout:fixed;width:676pt'>
+ <col width=64 style='width:48pt'>
+ <col width=115 style='mso-width-source:userset;mso-width-alt:4205;width:86pt'>
+ <col width=304 style='mso-width-source:userset;mso-width-alt:11117;width:228pt'>
+ <col width=115 style='mso-width-source:userset;mso-width-alt:4205;width:86pt'>
+ <col width=304 style='mso-width-source:userset;mso-width-alt:11117;width:228pt'>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=2 height=40 class=xl65 width=64 style='height:30.0pt;width:48pt'>Loop</td>
+  <td colspan=2 class=xl66 width=419 style='border-left:none;width:314pt'>Linux</td>
+  <td colspan=2 class=xl66 width=419 style='border-left:none;width:314pt'>Windows</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl67 style='height:15.0pt;border-top:none;border-left:
+  none'>sycl::queue q_</td>
+  <td class=xl67 style='border-top:none;border-left:none'>sycl::queue
+  q_=dpct::get_default_queue()</td>
+  <td class=xl67 style='border-top:none;border-left:none'>sycl::queue q_</td>
+  <td class=xl67 style='border-top:none;border-left:none'>sycl::queue
+  q_=dpct::get_default_queue()</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>1</td>
+  <td class=xl66 style='border-top:none;border-left:none'>64ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>60ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>141ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>123ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>2</td>
+  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>131ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>2ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>3</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>127ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>1ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>4</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>122ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>2ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>5</td>
+  <td class=xl66 style='border-top:none;border-left:none'>6ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>127ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>1ms</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=64 style='width:48pt'></td>
+  <td width=115 style='width:86pt'></td>
+  <td width=304 style='width:228pt'></td>
+  <td width=115 style='width:86pt'></td>
+  <td width=304 style='width:228pt'></td>
+ </tr>
+ <![endif]>
+</table>
 
-_____________________________________________
-
-Test with q_ = dpct::get_default_queue():
-
-Loop = 1
- build hash table time=60ms
-Loop = 2
- build hash table time=7ms
-Loop = 3
- build hash table time=7ms
-Loop = 4
- build hash table time=7ms
-Loop = 5
- build hash table time=7ms
-
-```
-### Test results on Windows
-```bash
-  Test with default q_:
-
-Loop = 1
- build hash table time=141ms
-Loop = 2
- build hash table time=137ms
-Loop = 3
- build hash table time=127ms
-Loop = 4
- build hash table time=122ms
-Loop = 5
- build hash table time=125ms
-
-_____________________________________________
-
-Test with q_ = dpct::get_default_queue():
-
-Loop = 1
- build hash table time=123ms
-Loop = 2
- build hash table time=2ms
-Loop = 3
- build hash table time=1ms
-Loop = 4
- build hash table time=2ms
-Loop = 5
- build hash table time=1ms
-
-```
 ## Summary
 This example compares the performance impact of sycl::queue q_ and q_ = dpct::get_default_queue() on the establishment of a hash table. The former needs to return the default device first, and then create a queue, and the latter directly returns the default queue of the current device. The result shows that we need to change the initialization method of q_ given in line 99 of the **fixed_radius_index.h** file to **sycl ::queue q_ = dpct::get_default_queue()**, so that Normals_Estimation has similar performance on Windows and Linux.
 
