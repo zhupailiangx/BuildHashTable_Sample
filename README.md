@@ -89,7 +89,7 @@ Loop = 5
 
 ```
 ## Summary
-       This example compares the performance impact of sycl::queue q_ and q_ = dpct::get_default_queue() on the establishment of a hash table. The former needs to return the default device first, and then create a queue, and the latter directly returns the default queue of the current device. The result shows that we need to change the initialization method of q_ given in line 99 of the **fixed_radius_index.h** file to **sycl ::queue q_ = dpct::get_default_queue()**, so that Normals_Estimation has similar performance on Windows and Linux.
+This example compares the performance impact of sycl::queue q_ and q_ = dpct::get_default_queue() on the establishment of a hash table. The former needs to return the default device first, and then create a queue, and the latter directly returns the default queue of the current device. The result shows that we need to change the initialization method of q_ given in line 99 of the **fixed_radius_index.h** file to **sycl ::queue q_ = dpct::get_default_queue()**, so that Normals_Estimation has similar performance on Windows and Linux.
 
 
 
