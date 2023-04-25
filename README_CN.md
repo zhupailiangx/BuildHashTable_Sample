@@ -98,7 +98,7 @@ sycl::queue q_和q_ = dpct::get_default_queue()
  </tr>
  <![endif]>
 </table>
-也可以在下面查看，和表格统计结果一致.\
+也可以在下面查看，和表格统计结果一致.
 
 #### Linux 上测试结果
 ```bash
