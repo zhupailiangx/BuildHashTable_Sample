@@ -28,7 +28,7 @@ in building hash tables on Linux and Windows, hoping to help the next work.
 * Select menu "Project > Build", then view the execution results
 
 ### Test results
-We have done five loop tests on Linux and Windows respectively. The relationship between the first loop and the following loops can be viewed in the table below.
+For the two queue initialization methods, we did five loop tests on Linux and Windows respectively. The relationship between the first loop and the subsequent loops can be viewed in the table below.
 
 <table border=0 cellpadding=0 cellspacing=0 width=902 style='border-collapse:
  collapse;table-layout:fixed;width:676pt'>
