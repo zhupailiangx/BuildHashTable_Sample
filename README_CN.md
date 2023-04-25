@@ -30,9 +30,76 @@ sycl::queue q_和q_ = dpct::get_default_queue()
 * 检查包含目录是否包含dpct文件路径
 * 选择菜单 "Project > Build" ，然后执行代码
      
-
-
-### Linux 上测试结果
+### 测试结果
+我们分别在Linux和windows做了五次循环测试，第一次循环和后面循环的关系可以查看下面的表格.
+<table border=0 cellpadding=0 cellspacing=0 width=902 style='border-collapse:
+ collapse;table-layout:fixed;width:676pt'>
+ <col width=64 style='width:48pt'>
+ <col width=115 style='mso-width-source:userset;mso-width-alt:4205;width:86pt'>
+ <col width=304 style='mso-width-source:userset;mso-width-alt:11117;width:228pt'>
+ <col width=115 style='mso-width-source:userset;mso-width-alt:4205;width:86pt'>
+ <col width=304 style='mso-width-source:userset;mso-width-alt:11117;width:228pt'>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=2 height=40 class=xl65 width=64 style='height:30.0pt;width:48pt'>Loop</td>
+  <td colspan=2 class=xl66 width=419 style='border-left:none;width:314pt'>Linux</td>
+  <td colspan=2 class=xl66 width=419 style='border-left:none;width:314pt'>Windows</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl67 style='height:15.0pt;border-top:none;border-left:
+  none'>sycl::queue q_</td>
+  <td class=xl67 style='border-top:none;border-left:none'>sycl::queue
+  q_=dpct::get_default_queue()</td>
+  <td class=xl67 style='border-top:none;border-left:none'>sycl::queue q_</td>
+  <td class=xl67 style='border-top:none;border-left:none'>sycl::queue
+  q_=dpct::get_default_queue()</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>1</td>
+  <td class=xl66 style='border-top:none;border-left:none'>64ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>60ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>141ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>123ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>2</td>
+  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>131ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>2ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>3</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>127ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>1ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>4</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>122ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>2ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none'>5</td>
+  <td class=xl66 style='border-top:none;border-left:none'>6ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>127ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>1ms</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=64 style='width:48pt'></td>
+  <td width=115 style='width:86pt'></td>
+  <td width=304 style='width:228pt'></td>
+  <td width=115 style='width:86pt'></td>
+  <td width=304 style='width:228pt'></td>
+ </tr>
+ <![endif]>
+</table>
+也可以在下面查看，和表格统计结果一致.
+#### Linux 上测试结果
 ```bash
   Test with default q_:
 
@@ -63,7 +130,7 @@ Loop = 5
  build hash table time=7ms
 
 ```
-### Windows上测试结果
+#### Windows上测试结果
 
 ```bash
   Test with default q_:
