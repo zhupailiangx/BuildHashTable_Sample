@@ -64,7 +64,7 @@ sycl::queue q_和q_ = dpct::get_default_queue()
   <td height=20 class=xl65 style='height:15.0pt;border-top:none'>2</td>
   <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
   <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>131ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>137ms</td>
   <td class=xl66 style='border-top:none;border-left:none'>2ms</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
@@ -85,7 +85,7 @@ sycl::queue q_和q_ = dpct::get_default_queue()
   <td height=20 class=xl65 style='height:15.0pt;border-top:none'>5</td>
   <td class=xl66 style='border-top:none;border-left:none'>6ms</td>
   <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>127ms</td>
+  <td class=xl66 style='border-top:none;border-left:none'>125ms</td>
   <td class=xl66 style='border-top:none;border-left:none'>1ms</td>
  </tr>
  <![if supportMisalignedColumns]>
