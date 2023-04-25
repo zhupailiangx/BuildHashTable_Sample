@@ -31,7 +31,7 @@ sycl::queue q_和q_ = dpct::get_default_queue()
 * 选择菜单 "Project > Build" ，然后执行代码
      
 ### 测试结果
-我们分别在Linux和windows做了五次循环测试，第一次循环和后面循环的关系可以查看下面的表格.
+对于两种队列初始化方法，我们分别在Linux和windows做了五次循环测试，第一次循环和后面循环的关系可以查看下面的表格.
 <table border=0 cellpadding=0 cellspacing=0 width=902 style='border-collapse:
  collapse;table-layout:fixed;width:676pt'>
  <col width=64 style='width:48pt'>
