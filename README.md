@@ -99,14 +99,14 @@ For the two queue initialization methods, we did five loop tests on Linux and Wi
 
 ### Comparison of different driver versions on Windows
 <div style="text-align: center;">
-<table border=0 align="center" cellpadding=0 cellspacing=0 width=586 style='border-collapse:
+<table border=0  cellpadding=0 cellspacing=0 width=586 style='border-collapse:
  collapse;table-layout:fixed;width:440pt'>
  <col width=64 span=2 style='width:48pt'>
  <col width=197 style='mso-width-source:userset;mso-width-alt:7204;width:148pt'>
  <col width=64 style='width:48pt'>
  <col width=197 style='mso-width-source:userset;mso-width-alt:7204;width:148pt'>
  <tr height=20 style='height:15.0pt'>
-  <td colspan=5 height=20 class=xl66 width=586 style='height:15.0pt;width:440pt;margin:0 auto'>Build
+  <td colspan=5 height=20 class=xl66 width=586 align="center" style='height:15.0pt;width:440pt;margin:0 auto'>Build
   hash table</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
