@@ -99,8 +99,7 @@ For the two queue initialization methods, we did five loop tests on Linux and Wi
 
 ### Comparison of different driver versions on Windows
 <div style="text-align: center;">
-<table border=0 cellpadding=0 cellspacing=0 width=586 style='border-collapse:
- collapse;style="margin: auto;table-layout:fixed;width:440pt'>
+<table border=0 cellpadding=0 cellspacing=0 width=586 style="margin: auto;table-layout:fixed;width:440pt'>
  <col width=64 span=2 style='width:48pt'>
  <col width=197 style='mso-width-source:userset;mso-width-alt:7204;width:148pt'>
  <col width=64 style='width:48pt'>
