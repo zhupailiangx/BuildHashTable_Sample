@@ -106,7 +106,7 @@ For the two queue initialization methods, we did five loop tests on Linux and Wi
  <col width=64 style='width:48pt'>
  <col width=197 style='mso-width-source:userset;mso-width-alt:7204;width:148pt'>
  <tr height=20 style='height:15.0pt'>
-  <td colspan=5 height=20 class=xl66 width=586 style='height:15.0pt;width:440pt;margin:auto'>Build
+  <td colspan=5 height=20 class=xl66 width=586 style='height:15.0pt;width:440pt;margin:0 auto'>Build
   hash table</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
