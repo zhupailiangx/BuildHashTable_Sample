@@ -116,9 +116,9 @@ For the two queue initialization methods, we did five loop tests on Linux and Wi
  <tr height=20 style='height:15.0pt'>
   <td height=20 class=xl67 style='height:15.0pt;border-top:none;border-left:
   none'>sycl::queue q_</td>
-  <td class=xl67 style='border-top:none;border-left:none'>q_=dpct::get_default_queue()</td>
+  <td class=xl67 style='border-top:none;border-left:none'>sycl::queue q_=dpct::get_default_queue()</td>
   <td class=xl67 style='border-top:none;border-left:none'>sycl::queue q_</td>
-  <td class=xl67 style='border-top:none;border-left:none'>q_=dpct::get_default_queue()</td>
+  <td class=xl67 style='border-top:none;border-left:none'>sycl::queue q_=dpct::get_default_queue()</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td height=20 class=xl67 align=right style='height:15.0pt;border-top:none'>1</td>
