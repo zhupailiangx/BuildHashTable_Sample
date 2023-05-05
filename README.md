@@ -97,6 +97,76 @@ For the two queue initialization methods, we did five loop tests on Linux and Wi
  <![endif]>
 </table>
 
+### Comparison of different driver versions on Windows
+<table border=0 cellpadding=0 cellspacing=0 width=586 style='border-collapse:
+ collapse;table-layout:fixed;width:440pt'>
+ <col width=64 span=2 style='width:48pt'>
+ <col width=197 style='mso-width-source:userset;mso-width-alt:7204;width:148pt'>
+ <col width=64 style='width:48pt'>
+ <col width=197 style='mso-width-source:userset;mso-width-alt:7204;width:148pt'>
+ <tr height=20 style='height:15.0pt'>
+  <td colspan=5 height=20 class=xl66 width=586 style='height:15.0pt;width:440pt'>Build
+  hash table</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=2 height=40 class=xl65 style='height:30.0pt;border-top:none'>Loop</td>
+  <td colspan=2 class=xl66 style='border-left:none'>Driver GFX_Win_101.4146</td>
+  <td colspan=2 class=xl66 style='border-left:none'>Driver GFX_Win_101.4255</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl67 style='height:15.0pt;border-top:none;border-left:
+  none'>q_</td>
+  <td class=xl67 style='border-top:none;border-left:none'>q_=dpct::get_default_queue()</td>
+  <td class=xl67 style='border-top:none;border-left:none'>q_</td>
+  <td class=xl67 style='border-top:none;border-left:none'>q_=dpct::get_default_queue()</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl67 align=right style='height:15.0pt;border-top:none'>1</td>
+  <td class=xl67 style='border-top:none;border-left:none'>103ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>96ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>101ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>94ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl67 align=right style='height:15.0pt;border-top:none'>2</td>
+  <td class=xl67 style='border-top:none;border-left:none'>100ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>96ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>8ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl67 align=right style='height:15.0pt;border-top:none'>3</td>
+  <td class=xl67 style='border-top:none;border-left:none'>94ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>94ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>8ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl67 align=right style='height:15.0pt;border-top:none'>4</td>
+  <td class=xl67 style='border-top:none;border-left:none'>94ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>95ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>8ms</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl67 align=right style='height:15.0pt;border-top:none'>5</td>
+  <td class=xl67 style='border-top:none;border-left:none'>94ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>94ms</td>
+  <td class=xl67 style='border-top:none;border-left:none'>8ms</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=197 style='width:148pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=197 style='width:148pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
 
 ## Summary
 $~~~~~~~~$ This sample compares the performance impact of sycl::queue q_ and q_ = dpct::get_default_queue() on the establishment of a hash table. The former needs to return the default device first, and then create a queue, and the latter directly returns the default queue of the current device. The results show that both methods of Linux can improve performance, while Windows can only improve performance when **q_ = dpct::get_default_queue()**. Therefore, we need to modify the initialization method of q_ given in line 99 of the **fixed_radius_index.h** file to **sycl: :queue q_ = dpct::get_default_queue()**, so that Normals_Estimation has similar performance on Windows and Linux.
