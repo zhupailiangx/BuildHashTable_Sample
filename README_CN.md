@@ -312,8 +312,9 @@ Loop = 5
 
 
 ## 总结
-本示例对比了sycl::queue q_和q_ = dpct::get_default_queue()对建立哈希表的性能影响，前者需要先返回默认设备，之后再创建一个queue,后者直接返回当前设备的默认队列。结果表明(1) Linux 两种方式都能提高性能，而Windows只有在q_ = dpct::get_default_queue()才能提高性能.
-(2) 最新版本驱动不能提高windows Normals_Estimation上的性能.
-(3) 设置 SYCL_ENABLE_DEFAULT_CONTEXTS=1可以提高windows 上Normals_Estimation 性能.
+本示例对比了sycl::queue q_和q_ = dpct::get_default_queue()对建立哈希表的性能影响，前者需要先返回默认设备，之后再创建一个queue,后者直接返回当前设备的默认队列。结果表明 <br />
+(1) Linux 两种方式都能提高性能，而Windows只有在q_ = dpct::get_default_queue()才能提高性能. <br />
+(2) 最新版本驱动不能提高windows Normals_Estimation上的性能. <br />
+(3) 设置 SYCL_ENABLE_DEFAULT_CONTEXTS=1可以提高windows 上Normals_Estimation 性能. <br />
 所以，我们需要把fixed_radius_index.h文件99行给出q_的初始化方式修改成**sycl::queue q_ = dpct::get_default_queue()**,或者环境设置**SYCL_ENABLE_DEFAULT_CONTEXTS=1**，这样Windows 和Linux上Normals_Estimation就有了差不多的性能.
 
