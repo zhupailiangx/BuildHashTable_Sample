@@ -183,7 +183,7 @@ The following is a comparison of setting and not setting the attribute SYCL_ENAB
  <col width=64 style='width:48pt'>
  <col width=195 style='mso-width-source:userset;mso-width-alt:7131;width:146pt'>
  <tr height=20 style='height:15.0pt'>
-  <td colspan=5 height=20 class=xl65 width=517 style='height:15.0pt;width:388pt'>Build
+  <td colspan=5 height=20 class=xl65 width=517 align="center" style='height:15.0pt;width:388pt'>Build
   Hash Table</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
