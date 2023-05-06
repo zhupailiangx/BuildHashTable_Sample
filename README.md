@@ -173,7 +173,7 @@ The driver version may be affected. We have added the experiment of the latest d
 
 ### Set Target Properties
 
-The following is a comparison of setting and not setting the attribute A=b
+The following is a comparison of setting and not setting the attribute SYCL_ENABLE_DEFAULT_CONTEXTS=1.
 
 <table border=0 cellpadding=0 cellspacing=0 width=517 style='border-collapse:
  collapse;table-layout:fixed;width:388pt'>
