@@ -248,8 +248,8 @@ The following is a comparison of setting and not setting the attribute SYCL_ENAB
 
 
 ## Summary
-This sample compares the performance impact of sycl::queue q_ and q_ = dpct::get_default_queue() on the establishment of a hash table. The former needs to return the default device first, and then create a queue, and the latter directly returns the default queue of the current device. The results show that both methods of Linux can improve performance, while Windows can only improve performance when **q_ = dpct::get_default_queue()**. <br />
-At the same time, the latest driver board version does not significantly improve performance.However, performance can be improved by setting **SYCL_ENABLE_DEFAULT_CONTEXTS=1**. Therefore, we need to modify the initialization method of q_ given in line 99 of the **fixed_radius_index.h** file to **sycl: :queue q_ = dpct::get_default_queue()** or set **SYCL_ENABLE_DEFAULT_CONTEXTS=1**,  so that Normals_Estimation has similar performance on Windows and Linux.
+* This sample compares the performance impact of sycl::queue q_ and q_ = dpct::get_default_queue() on the establishment of a hash table. The former needs to return the default device first, and then create a queue, and the latter directly returns the default queue of the current device. The results show that both methods of Linux can improve performance, while Windows can only improve performance when **q_ = dpct::get_default_queue()**. <br />
+* At the same time, the latest driver board version does not significantly improve performance.However, performance can be improved by setting **SYCL_ENABLE_DEFAULT_CONTEXTS=1**. Therefore, we need to modify the initialization method of q_ given in line 99 of the **fixed_radius_index.h** file to **sycl: :queue q_ = dpct::get_default_queue()** or set **SYCL_ENABLE_DEFAULT_CONTEXTS=1**,  so that Normals_Estimation has similar performance on Windows and Linux.
 
 
 
