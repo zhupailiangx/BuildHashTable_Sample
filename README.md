@@ -86,14 +86,7 @@ For the two queue initialization methods, we did five loop tests on Linux and Wi
   <td class=xl66 style='border-top:none;border-left:none'>127ms</td>
   <td class=xl66 style='border-top:none;border-left:none'>1ms</td>
  </tr>
- <![if supportMisalignedColumns]>
- <tr height=0 style='display:none'>
-  <td width=64 style='width:48pt'></td>
-  <td width=115 style='width:86pt'></td>
-  <td width=304 style='width:228pt'></td>
-  <td width=115 style='width:86pt'></td>
-  <td width=304 style='width:228pt'></td>
- </tr>
+
  <![endif]>
 </table>
 
