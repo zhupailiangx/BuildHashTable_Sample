@@ -5,11 +5,11 @@ In the process of experiment Normals_Estimation, we found that in the file **fix
 sycl::queue q_ 
 ```
 However,after testing, it is found that the code performance of such an initialization method is very different on Linux and Windows.
-So, write this example and compare the performance difference between 
+So, write this example and first compare the performance difference between 
 ```bash
 sycl::queue q_ and q_ = dpct::get_default_queue()
 ```
-in building hash tables on Linux and Windows, hoping to help the next work.
+in building hash tables on Linux and Windows. Then, test SYCL_ENABLE_DEFAULT_CONTEXTS=1 and latest driver, hoping to help the next work.
 
 ### On Linux
 * Install oneapi(2023.0.0)
@@ -248,7 +248,8 @@ The following is a comparison of setting and not setting the attribute SYCL_ENAB
 
 
 ## Summary
-$~~~~~~~~$ This sample compares the performance impact of sycl::queue q_ and q_ = dpct::get_default_queue() on the establishment of a hash table. The former needs to return the default device first, and then create a queue, and the latter directly returns the default queue of the current device. The results show that both methods of Linux can improve performance, while Windows can only improve performance when **q_ = dpct::get_default_queue()**.At the same time, the latest driver board version does not significantly improve performance. Therefore, we need to modify the initialization method of q_ given in line 99 of the **fixed_radius_index.h** file to **sycl: :queue q_ = dpct::get_default_queue()**, so that Normals_Estimation has similar performance on Windows and Linux.
+$~~~~~~~~$ This sample compares the performance impact of sycl::queue q_ and q_ = dpct::get_default_queue() on the establishment of a hash table. The former needs to return the default device first, and then create a queue, and the latter directly returns the default queue of the current device. The results show that both methods of Linux can improve performance, while Windows can only improve performance when **q_ = dpct::get_default_queue()**.<br />
+At the same time, the latest driver board version does not significantly improve performance. Therefore, we need to modify the initialization method of q_ given in line 99 of the **fixed_radius_index.h** file to **sycl: :queue q_ = dpct::get_default_queue()**, so that Normals_Estimation has similar performance on Windows and Linux.
 
 
 
