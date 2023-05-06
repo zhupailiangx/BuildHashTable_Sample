@@ -187,7 +187,7 @@ The following is a comparison of setting and not setting the attribute SYCL_ENAB
   Hash Table</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td rowspan=2 height=40 class=xl65 style='height:30.0pt;border-top:none'>LOOP</td>
+  <td rowspan=2 height=40 class=xl65 style='height:30.0pt;border-top:none'>Loop</td>
   <td colspan=2 class=xl67 style='border-right:.5pt solid black;border-left:
   none'>default</td>
   <td colspan=2 class=xl65 style='border-left:none'>SYCL_ENABLE_DEFAULT_CONTEXTS=1</td>
