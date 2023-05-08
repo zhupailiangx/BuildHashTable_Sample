@@ -175,73 +175,74 @@ The driver version may be affected. We have added the experiment of the latest d
 
 The following is a comparison of setting and not setting the attribute SYCL_ENABLE_DEFAULT_CONTEXTS=1.
 
-<table border=0 cellpadding=0 cellspacing=0 width=517 style='border-collapse:
- collapse;table-layout:fixed;width:388pt'>
+<table border=0 cellpadding=0 cellspacing=0 width=813 style='border-collapse:
+ collapse;table-layout:fixed;width:611pt'>
  <col width=64 style='width:48pt'>
- <col width=97 span=2 style='mso-width-source:userset;mso-width-alt:3547;
- width:73pt'>
- <col width=64 style='width:48pt'>
- <col width=195 style='mso-width-source:userset;mso-width-alt:7131;width:146pt'>
+ <col width=97 style='mso-width-source:userset;mso-width-alt:3547;width:73pt'>
+ <col width=274 style='mso-width-source:userset;mso-width-alt:10020;width:206pt'>
+ <col width=97 style='mso-width-source:userset;mso-width-alt:3547;width:73pt'>
+ <col width=281 style='mso-width-source:userset;mso-width-alt:10276;width:211pt'>
  <tr height=20 style='height:15.0pt'>
-  <td colspan=5 height=20 class=xl65 width=517 align="center" style='height:15.0pt;width:388pt'>Build
+  <td colspan=5 height=20 class=xl66 width=813 align="center" style='height:15.0pt;width:611pt'>Build
   Hash Table</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td rowspan=2 height=40 class=xl65 style='height:30.0pt;border-top:none'>Loop</td>
+  <td rowspan=2 height=40 class=xl66 style='height:30.0pt;border-top:none'>LOOP</td>
   <td colspan=2 class=xl67 style='border-right:.5pt solid black;border-left:
-  none'> </td>
-  <td colspan=2 class=xl65 style='border-left:none'>SYCL_ENABLE_DEFAULT_CONTEXTS=1</td>
+  none'>default</td>
+  <td colspan=2 class=xl66 style='border-left:none'>SYCL_ENABLE_DEFAULT_CONTEXTS=1</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 style='height:15.0pt;border-top:none;border-left:
+  <td height=20 class=xl65 style='height:15.0pt;border-top:none;border-left:
   none'>sycl::queue q_</td>
-  <td class=xl66 style='border-top:none;border-left:none'>sycl::queue q_</td>
-  <td class=xl66 style='border-top:none;border-left:none'>sycl::queu<span
-  style='display:none'>e q_</span></td>
-  <td class=xl66 style='border-top:none;border-left:none'>sycl::queue q_</td>
+  <td class=xl65 style='border-top:none;border-left:none'>sycl::queue
+  q_=dpct::get_default_queue()</td>
+  <td class=xl65 style='border-top:none;border-left:none'>sycl::queue q_</td>
+  <td class=xl65 style='border-top:none;border-left:none'>sycl::queue
+  q_=dpct::get_default_queue()</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 align=right style='height:15.0pt;border-top:none'>1</td>
-  <td class=xl66 style='border-top:none;border-left:none'>102ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>95ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>108ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>94ms</td>
+  <td height=20 class=xl65 align=right style='height:15.0pt;border-top:none'>1</td>
+  <td class=xl65 style='border-top:none;border-left:none'>102ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>95ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>108ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>94ms</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 align=right style='height:15.0pt;border-top:none'>2</td>
-  <td class=xl66 style='border-top:none;border-left:none'>96ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
+  <td height=20 class=xl65 align=right style='height:15.0pt;border-top:none'>2</td>
+  <td class=xl65 style='border-top:none;border-left:none'>96ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>8ms</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 align=right style='height:15.0pt;border-top:none'>3</td>
-  <td class=xl66 style='border-top:none;border-left:none'>95ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
+  <td height=20 class=xl65 align=right style='height:15.0pt;border-top:none'>3</td>
+  <td class=xl65 style='border-top:none;border-left:none'>95ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>8ms</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 align=right style='height:15.0pt;border-top:none'>4</td>
-  <td class=xl66 style='border-top:none;border-left:none'>95ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>9ms</td>
+  <td height=20 class=xl65 align=right style='height:15.0pt;border-top:none'>4</td>
+  <td class=xl65 style='border-top:none;border-left:none'>95ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>8ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>9ms</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl66 align=right style='height:15.0pt;border-top:none'>5</td>
-  <td class=xl66 style='border-top:none;border-left:none'>96ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>9ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>7ms</td>
-  <td class=xl66 style='border-top:none;border-left:none'>8ms</td>
+  <td height=20 class=xl65 align=right style='height:15.0pt;border-top:none'>5</td>
+  <td class=xl65 style='border-top:none;border-left:none'>96ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>9ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>7ms</td>
+  <td class=xl65 style='border-top:none;border-left:none'>8ms</td>
  </tr>
  <![if supportMisalignedColumns]>
  <tr height=0 style='display:none'>
   <td width=64 style='width:48pt'></td>
   <td width=97 style='width:73pt'></td>
+  <td width=274 style='width:206pt'></td>
   <td width=97 style='width:73pt'></td>
-  <td width=64 style='width:48pt'></td>
-  <td width=195 style='width:146pt'></td>
+  <td width=281 style='width:211pt'></td>
  </tr>
  <![endif]>
 </table>
