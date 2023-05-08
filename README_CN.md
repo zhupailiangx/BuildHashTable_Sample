@@ -240,6 +240,7 @@ Loop = 5
 ### 属性设置
 测试环境属性设置SYCL_ENABLE_DEFAULT_CONTEXTS=1.
 在 SYCL 运行时启用（‘1’）或禁用（‘0’）默认平台上下文的创建。每个平台的默认上下文包含平台中的所有设备。在 Linux 上默认启用，在 Windows 上禁用。
+此扩展还修改了队列构造函数的行为。队列将不再在构建时创建新的上下文。相反，他们将使用设备平台的默认上下文。
 <table border=0 cellpadding=0 cellspacing=0 width=517 style='border-collapse:
  collapse;table-layout:fixed;width:388pt'>
  <col width=64 style='width:48pt'>
