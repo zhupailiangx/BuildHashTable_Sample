@@ -185,7 +185,7 @@ Enable (‘1’) or disable (‘0’) creation of default platform contexts in S
  <col width=281 style='mso-width-source:userset;mso-width-alt:10276;width:211pt'>
  <tr height=20 style='height:15.0pt'>
   <td colspan=5 height=20 class=xl66 width=813 align="center" style='height:15.0pt;width:611pt'>Build
-  Hash Table</td>
+  Hash Table on Windows</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td rowspan=2 height=40 class=xl66 style='height:30.0pt;border-top:none'>Loop</td>
