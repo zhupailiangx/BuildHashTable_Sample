@@ -174,7 +174,7 @@ The driver version may be affected. We have added the experiment of the latest d
 ### Set Target Properties
 
 The following is a comparison of setting and not setting the attribute SYCL_ENABLE_DEFAULT_CONTEXTS=1.
-Enable (‘1’) or disable (‘0’) creation of default platform contexts in SYCL runtime. The default context for each platform contains all devices in the platform. Refer to Platform Default Contexts extension to learn more. Enabled by default on Linux and disabled on Windows.
+Enable (‘1’) or disable (‘0’) creation of default platform contexts in SYCL runtime. The default context for each platform contains all devices in the platform. Refer to Platform Default Contexts extension to learn more. Enabled by default on Linux and disabled on Windows.This extension also modifies the behavior of queue constructors. Queues will no longer create a new context upon construction. Instead, they will use the default context from the device’s platform.
 
 <table border=0 cellpadding=0 cellspacing=0 width=813 style='border-collapse:
  collapse;table-layout:fixed;width:611pt'>
