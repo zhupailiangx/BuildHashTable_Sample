@@ -250,7 +250,7 @@ Loop = 5
  <col width=195 style='mso-width-source:userset;mso-width-alt:7131;width:146pt'>
  <tr height=20 style='height:15.0pt'>
   <td colspan=5 height=20 class=xl65 width=517 align="center" style='height:15.0pt;width:388pt'>Build
-  Hash Table</td>
+  Hash Table on Windows</td>
  </tr>
  <tr height=20 style='height:15.0pt'>
   <td rowspan=2 height=40 class=xl65 style='height:30.0pt;border-top:none'>Loop</td>
