@@ -1,6 +1,7 @@
 # Different ways of initializing queue on Linux and Windows
 ## Introduction
-In the process of experiment Normals_Estimation, we found that in the file **fixed_radius_index.h** line 99, the initialization method of q_ is 
+In the process of experiment Normals_Estimation, we found that in the file **fixed_radius_index.h** line 99, the initialization method of q_ is
+ 
 ```bash
 sycl::queue q_ 
 ```
